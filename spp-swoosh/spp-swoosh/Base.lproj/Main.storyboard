@@ -93,7 +93,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-Y2-5es">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6O-2d-zL1" customClass="BorderButton" customModule="spp_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6O-2d-zL1" customClass="BorderButton" customModule="spp_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="19.5" y="597" width="335.5" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40517979450000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -122,6 +122,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="7hq-cC-wuF" eventType="touchUpInside" id="cGg-n0-WhO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cye-zV-48o" customClass="BorderButton" customModule="spp_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="68" width="335.5" height="50"/>
@@ -134,6 +137,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="7hq-cC-wuF" eventType="touchUpInside" id="bIo-ml-1wE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3z-4K-oAs" customClass="BorderButton" customModule="spp_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="335.5" height="50"/>
@@ -146,6 +152,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoEdTapped:" destination="7hq-cC-wuF" eventType="touchUpInside" id="tKt-2B-ZRs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -197,6 +206,7 @@
                         <viewLayoutGuide key="safeArea" id="k36-hj-7Gm"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="h6O-2d-zL1" id="gbp-Ii-M3W"/>
                         <segue destination="J6j-Ok-vtF" kind="show" identifier="skillsVCSegue" id="Euh-PE-HKl"/>
                     </connections>
                 </viewController>
